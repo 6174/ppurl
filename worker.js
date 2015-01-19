@@ -22,7 +22,7 @@ module.exports = function(data, callback) {
 			$links.map(function(index, link) {
 				var href = link.attribs.href;
 				var splits = href.split('|');
-				data += '[' + urlencode.decode(splits[2]) + '](' + href + ')\n';
+				data += '[' + urlencode.decode(splits[2]) + '](' + href + ')\n\n';
 				return link.attribs.href;
 			});
 			var file = './data/' + page + '.md';
